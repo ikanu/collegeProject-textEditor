@@ -12,6 +12,7 @@ class MainWindow;
 
 class MainWindow : public QMainWindow
 {
+//Macro that needs to be there for signals and slots
     Q_OBJECT
 
 public:

@@ -6,15 +6,19 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+//Setting TextEdit as the Central widget in the window
     this->setCentralWidget(ui->textEdit);
 }
 
+//deconstructor
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
 
+
+//New
 void MainWindow::on_actionNew_triggered()
 {
     fileName = "";
@@ -22,7 +26,7 @@ void MainWindow::on_actionNew_triggered()
 }
 
 
-
+//OPEN
 void MainWindow::on_actionOpen_triggered()
 {
     QString file = QFileDialog::getOpenFileName(this, "Open a file");
@@ -41,6 +45,8 @@ void MainWindow::on_actionOpen_triggered()
     }
 }
 
+
+//Save
 void MainWindow::on_actionSave_triggered()
 {
     //Test for filename
@@ -57,6 +63,8 @@ void MainWindow::on_actionSave_triggered()
 
 }
 
+
+//Save as
 void MainWindow::on_actionSave_As_triggered()
 {
     QString file = QFileDialog::getSaveFileName(this, "Open a file");
@@ -66,36 +74,50 @@ void MainWindow::on_actionSave_As_triggered()
     }
 }
 
+
+//Cut
 void MainWindow::on_actionCut_triggered()
 {
     ui->textEdit->cut();
 }
 
+
+//Copy
 void MainWindow::on_actionCopy_triggered()
 {
     ui->textEdit->copy();
 }
 
+
+//Paste
 void MainWindow::on_actionPaste_triggered()
 {
     ui->textEdit->paste();
 }
 
+
+//Undo
 void MainWindow::on_actionUndo_triggered()
 {
     ui->textEdit->undo();
 }
 
+
+//Redo
 void MainWindow::on_actionRedo_triggered()
 {
     ui->textEdit->redo();
 }
 
+
+//About
 void MainWindow::on_actionAbout_triggered()
 {
     QMessageBox::information(this , tr("About") , tr("Text Editing Program\n" "Created by - Kartik\n""Vocational Training 3rd year mini-project.\n"));
 }
 
+
+//Quit
 void MainWindow::on_actionQuit_triggered()
 {
 
@@ -104,12 +126,15 @@ void MainWindow::on_actionQuit_triggered()
 }
 
 
+//Bold
 void MainWindow::on_actionBold_triggered()
 {
     ui->textEdit->setFontWeight(75);
 
 }
 
+
+//Remove all formats( Normal )
 void MainWindow::on_actionNormal_triggered()
 {
     ui->textEdit->setFontWeight(50);
@@ -118,15 +143,18 @@ void MainWindow::on_actionNormal_triggered()
 }
 
 
-
+//Underline
 void MainWindow::on_actionUnderline_triggered()
 {
     ui->textEdit->setFontUnderline(true);
 }
 
 
-
+//Italic
 void MainWindow::on_actionItalic_triggered()
 {
     ui->textEdit->setFontItalic(true);
 }
+
+
+//end
