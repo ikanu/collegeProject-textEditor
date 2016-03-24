@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/new/images">
+        <file>icons/arrow_redo.png</file>
+        <file>icons/arrow_undo.png</file>
+        <file>icons/copy.png</file>
+        <file>icons/cut_red.png</file>
+        <file>icons/new.png</file>
+        <file>icons/open.png</file>
+        <file>icons/page_save.png</file>
+        <file>icons/paste_plain.png</file>
+        <file>icons/saveas.png</file>
+        <file>icons/information.png</file>
+        <file>icons/text_bold.png</file>
+        <file>icons/text_italic.png</file>
+        <file>icons/text_underline.png</file>
+        <file>icons/tux.png</file>
+    </qresource>
+</RCC>
